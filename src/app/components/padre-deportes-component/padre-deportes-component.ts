@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class PadreDeportesComponent {
   public deportes: Array<string>;
+  public mensaje!: string;
+
+  // Un método para enviar al hijo
+  seleccionarFavoritoPadre(event: any): void {
+    console.log("Leyendo padre")
+    this.mensaje = "Su deporte favorito es: " + event;
+  }
 
   constructor() {
     this.deportes = ["Curling", "Dardos", "Canicas", "Beisbol"]
