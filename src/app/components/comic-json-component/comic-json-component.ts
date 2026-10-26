@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Comic } from '../../models/comic'; 
 
 @Component({
@@ -9,7 +9,7 @@ import { Comic } from '../../models/comic';
 })
 export class ComicJsonComponent {
   public arrayComics: Array<Comic>;
-  constructor() {
+  constructor(private _cdr: ChangeDetectorRef) {
     this.arrayComics = [];
 
   }
@@ -24,8 +24,8 @@ export class ComicJsonComponent {
         // creamos un Comic de Angular
         let comic: Comic = new Comic(elem.nombre, elem.imagen, elem.descripcion);
         this.arrayComics.push(comic);
-        console.log(elem);
       }
+      this._cdr.detectChanges();
     })
   }
 }
