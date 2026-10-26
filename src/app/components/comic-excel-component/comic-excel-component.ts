@@ -18,7 +18,7 @@ export class ComicExcelComponent {
   }
 
   cargarComics(): void {
-    let path = "./assets/comics.xslx";
+    let path = "./assets/comics.xlsx";
     fetch(path).then(response => response.arrayBuffer())
     .then ((buffer) => {
       // Leer el buffer y transformarlo a libro de Excel
