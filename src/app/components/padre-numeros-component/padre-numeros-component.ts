@@ -15,7 +15,7 @@ export class PadreNumerosComponent {
     this.arrayNumeros = [8,5,6] 
   } 
   
-  sumarNumerosParent(numeroRecibido: number): void { 
+  sumarNumerosParent(numeroRecibido: any): void { 
     this.suma += numeroRecibido; 
   } 
   generarNumero(): void { 
