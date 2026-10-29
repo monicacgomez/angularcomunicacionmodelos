@@ -12,35 +12,38 @@ export class ListaProductosComponent {
   public listaproductos: Array<Producto>;
 
   constructor() {
-    this.producto = new Producto("Camiseta", "https://lataquillafutbol.com/wp-content/uploads/2026/08/real-madrid-26-27-local.jpg"
-      , 100)
-    this.listaproductos = new Array<Producto>();
+    this.producto = new Producto(
+      'Suéter',
+      'https://img1.shopcider.com/product/1696859959000-RkT5i7.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+      35
+    );
+
     this.listaproductos = [
       new Producto(
-        "Nike Air Jordan",
-        "https://images.zapantojos.com/media/2022/07/39253d37.jpg",
-        150
+        'Vestido',
+        'https://img1.shopcider.com/product/1787191131000-HSARD2.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+        45
       ),
       new Producto(
-        "Nike Air Mag",
-        "https://limitedresell.com/img/anblog/b/b-654d14cfc06f5-anblog_thumb.jpg",
-        1900
-      ),	  
-      new Producto(
-        "New Balance 998",
-        "https://www.sneakers-actus.fr/wp-content/uploads/2023/06/NB-998-U998TE-x-Teddy-Santis-Plum-Purple-MIUSA.jpg",
-        140
+        'Vestido',
+        'https://img1.shopcider.com/product/1788227556000-CKHdY2.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+        50
       ),
       new Producto(
-        "https://jhayber.com/documents/images/products/63638-850-1.jpg",
-        "J-Hayber Olimpo",
-        60
+        'Abrigo',
+        'https://img1.shopcider.com/product/1762147749000-b3hbR5.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+        65
       ),
       new Producto(
-        "Cangrejeras",
-        "https://tonipons.com/cdn/shop/files/CALA_CRISTAL__0.webp",
-        10
-      )
-    ]    
+        'Abrigo',
+        'https://img1.shopcider.com/product/1758808081000-jtZWMP.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+        80
+      ),
+      new Producto(
+        'Abrigo',
+        'https://img1.shopcider.com/product/1789547772000-pXKD3k.jpg?x-oss-process=image/resize,w_1050,m_lfit/quality,Q_80/interlace,1',
+        70
+      ),
+    ];
   }
 }

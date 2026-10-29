@@ -1,0 +1,42 @@
+.home-portada {
+  width: 40%;
+  max-width: 900px;
+  margin: 20px 0 30px;
+}
+
+.home-imagen {
+  display: block;
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+
+  border: 2px solid #b08f7a;
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(91, 49, 19, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-imagen:hover {
+  transform: none;
+  box-shadow: 0 6px 18px rgba(91, 49, 19, 0.15);
+}
+
+.home-bienvenida {
+  margin: 20px 0 30px;
+
+  color: #5b3113;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  text-align: left;
+}
+
+
+@media (max-width: 480px) {
+  .home-imagen {
+    max-height: 280px;
+    border-radius: 10px;
+  }
+}

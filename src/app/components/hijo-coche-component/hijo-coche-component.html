@@ -1,11 +1,38 @@
-<h1 style="color:blue">
-    {{car.marca}} {{car.modelo}}
-</h1>
-<h2 [ngClass]="{
-    rojo: car.velocidad == 0,
-    verde: car.velocidad > 0
-}">
-    Velocidad actual: {{car.velocidad}} km/h
-</h2>
-<button (click)="acelerarCoche()">Pide pista!!! acelera</button>
-<button (click)="frenarCoche()">Frenar coche</button>
+<section class="coche-card">
+  
+  <img
+  class="coche-imagen"
+  [src]="
+  car.marca === 'Ford' ? '/assets/images/Ford%20Mustang.jpg' :
+  car.marca === 'Volkswagen' ? '/assets/images/Volkswagen%20Escarabajo.jpg' :
+  '/assets/images/Lamborghini%20Diablo.jpg'
+  "
+  [alt]="car.marca + ' ' + car.modelo"
+  />
+
+
+  <h1 class="coche-titulo">
+    {{ car.marca }} {{ car.modelo }}
+  </h1>
+
+  <h2
+    class="coche-velocidad"
+    [ngClass]="{
+      rojo: car.velocidad == 0,
+      verde: car.velocidad > 0
+    }"
+  >
+    Velocidad actual: {{ car.velocidad }} km/h
+  </h2>
+
+  <div class="coche-acciones">
+    <button class="boton-acelerar" (click)="acelerarCoche()">
+      Acelerar
+    </button>
+
+    <button class="boton-frenar" (click)="frenarCoche()">
+      Frenar coche
+    </button>
+  </div>
+
+</section>

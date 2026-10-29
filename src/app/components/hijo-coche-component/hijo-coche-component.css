@@ -1,7 +1,104 @@
-.rojo {
-    background-color:  lightcoral;
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #5b3113;
 }
 
+.coche-card {
+  margin: 0;
+  padding: 18px;
+  background-color: #e6d2b9;
+  border: 1px solid #b08f7a;
+  border-radius: 12px;
+  box-shadow: 0 3px 9px rgba(91, 49, 19, 0.08);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.coche-card:hover {
+  border-color: #795138;
+  box-shadow: 0 7px 18px rgba(91, 49, 19, 0.15);
+}
+
+/* Nombre del coche */
+.coche-titulo {
+  margin: 0 0 14px;
+  color: #5b3113;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Cajita de velocidad */
+.coche-velocidad {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Coche parado */
+.rojo {
+  background-color: #d98282;
+  color: #5b3113;
+}
+
+/* Coche en movimiento */
 .verde {
-    background-color: lightgreen;
+  background-color: #a8c99a;
+  color: #294a27;
+}
+
+/* Botones */
+.coche-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.coche-acciones button {
+  padding: 9px 15px;
+  border: 1px solid #5b3113;
+  border-radius: 8px;
+  background-color: #5b3113;
+  color: #f7f2e0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.coche-acciones button:hover {
+  background-color: #795138;
+  border-color: #795138;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(91, 49, 19, 0.18);
+}
+
+.coche-acciones button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Imagen del coche */
+.coche-imagen {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: #f7f2e0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+
+/* Enfoque accesible */
+.coche-acciones button:focus-visible {
+  outline: 2px solid #795138;
+  outline-offset: 3px;
 }

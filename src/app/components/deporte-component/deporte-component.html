@@ -1,3 +1,9 @@
-<h4 style="color:blue">{{sport}}</h4>
-<button (click)="mostrarFavorito()">Favorito</button>
-<h3 style="color:red">{{mensaje}}</h3>
+<h4 class="deporte-nombre">{{ sport }}</h4>
+
+<button class="deporte-boton" (click)="mostrarFavorito()">
+  Favorito
+</button>
+
+@if (mensaje) {
+  <h3 class="deporte-mensaje">{{ mensaje }}</h3>
+}

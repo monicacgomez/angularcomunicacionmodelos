@@ -1,17 +1,31 @@
-<h1>Lista de modelos productos</h1>
+<h1 class="productos-titulo"> Nuestra colección </h1>
 
-<p>{{producto.nombre}}</p>
+<div class="productos-grid">
 
-<p>Precio: {{producto.precio}}</p>
+  <article class="producto-card">
+    <img
+      [src]="producto.imagen"
+      [alt]="producto.nombre"
+      class="producto-imagen"
+    />
+    <div class="producto-info">
+      <h2>{{ producto.nombre }}</h2>
+      <p class="producto-precio">{{ producto.precio }} €</p>
+    </div>
+  </article>
 
-<img src="{{producto.imagen}}"
-    style="width: 150px; height: 150px;"/>
+  @for (prod of listaproductos; track prod) {
+    <article class="producto-card">
+      <img
+        [src]="prod.imagen"
+        [alt]="prod.nombre"
+        class="producto-imagen"
+      />
+      <div class="producto-info">
+        <h2>{{ prod.nombre }}</h2>
+        <p class="producto-precio">{{ prod.precio }} €</p>
+      </div>
+    </article>
+  }
 
-@for (prod of listaproductos; track prod){
-    <p>{{prod.nombre}}</p>
-
-    <p>Precio: {{prod.precio}}</p>
-
-    <img src="{{prod.imagen}}"
-        style="width: 150px; height: 150px;"/>    
-}
+</div>
