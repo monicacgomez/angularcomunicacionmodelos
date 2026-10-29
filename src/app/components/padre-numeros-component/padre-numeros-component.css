@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  color: #5b3113;
+}
+
+.numeros-pagina {
+  max-width: 1100px;
+}
+
+.numeros-titulo {
+  margin: 20px 0;
+  color: #5b3113;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* Resultado de la suma */
+.suma-panel {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 12px 18px;
+  background-color: #5b3113;
+  border: 1px solid #795138;
+  border-radius: 10px;
+}
+
+.suma-resultado {
+  margin: 0;
+  color: #f7f2e0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Botón para generar números */
+.boton-generar {
+  display: block;
+  margin: 0 0 24px;
+  padding: 10px 17px;
+  background-color: #5b3113;
+  color: #f7f2e0;
+  border: 1px solid #5b3113;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.boton-generar:hover {
+  background-color: #795138;
+  border-color: #795138;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(91, 49, 19, 0.2);
+}
+
+.boton-generar:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.boton-generar:focus-visible {
+  outline: 2px solid #795138;
+  outline-offset: 3px;
+}
+
+/* Cuadrícula de números */
+.numeros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .numeros-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .numeros-grid {
+    grid-template-columns: 1fr;
+  }
+}

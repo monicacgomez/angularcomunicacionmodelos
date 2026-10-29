@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  min-width: 0;
+  font-family: Arial, sans-serif;
+}
+
+.numero-card {
+  padding: 18px;
+  background-color: #e6d2b9;
+  border: 1px solid #b08f7a;
+  border-radius: 12px;
+  box-shadow: 0 3px 9px rgba(91, 49, 19, 0.08);
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.numero-card:hover {
+  transform: translateY(-5px);
+  border-color: #795138;
+  box-shadow: 0 9px 20px rgba(91, 49, 19, 0.17);
+}
+
+.numero-titulo {
+  margin: 0 0 16px;
+  color: #5b3113;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.numero-boton {
+  padding: 9px 15px;
+  background-color: #5b3113;
+  color: #f7f2e0;
+  border: 1px solid #5b3113;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+              transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.numero-boton:hover {
+  background-color: #795138;
+  border-color: #795138;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(91, 49, 19, 0.18);
+}
+
+.numero-boton:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.numero-boton:focus-visible {
+  outline: 2px solid #795138;
+  outline-offset: 3px;
+}

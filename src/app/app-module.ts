@@ -10,6 +10,11 @@ import { PadreCochesComponent } from './components/padre-coches-component/padre-
 import { HijoCocheComponent } from './components/hijo-coche-component/hijo-coche-component';
 import { PadreDeportesComponent } from './components/padre-deportes-component/padre-deportes-component';
 import { DeporteComponent } from './components/deporte-component/deporte-component';
+import { PadreNumerosComponent } from './components/padre-numeros-component/padre-numeros-component';
+import { HijoNumeroComponent } from './components/hijo-numero-component/hijo-numero-component';
+import { ComicsSimpleComponent } from './components/comics-simple-component/comics-simple-component';
+import { ComicJsonComponent } from './components/comic-json-component/comic-json-component';
+import { ComicExcelComponent } from './components/comic-excel-component/comic-excel-component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,15 @@ import { DeporteComponent } from './components/deporte-component/deporte-compone
     PadreCochesComponent,
     HijoCocheComponent,
     PadreDeportesComponent,
-    DeporteComponent
+    DeporteComponent,
+    PadreNumerosComponent,
+    HijoNumeroComponent,
+    ComicsSimpleComponent,
+    ComicJsonComponent,
+    ComicExcelComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
-  bootstrap: [App]
+  bootstrap: [App],
 })
 export class AppModule {}

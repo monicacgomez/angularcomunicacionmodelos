@@ -1,0 +1,20 @@
+<section class="numeros-pagina">
+  <h1 class="numeros-titulo">Padre números</h1>
+
+  <div class="suma-panel">
+    <h2 class="suma-resultado">La suma es {{ suma }}</h2>
+  </div>
+
+  <button class="boton-generar" (click)="generarNumero()">
+    + Generar número
+  </button>
+
+  <div class="numeros-grid">
+    @for (num of arrayNumeros; track $index) {
+      <app-hijo-numero-component
+        [numero]="num"
+        (sumarNumerosParent)="sumarNumerosParent($event)">
+      </app-hijo-numero-component>
+    }
+  </div>
+</section>

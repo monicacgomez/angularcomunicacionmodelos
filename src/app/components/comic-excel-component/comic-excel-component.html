@@ -1,0 +1,26 @@
+<section class="comics-pagina">
+  <h1 class="comics-titulo">Comics Excel</h1>
+
+  <button class="comics-boton" (click)="cargarComics()">
+    Cargar comics
+  </button>
+
+  <div class="comics-grid">
+    @for (comic of arrayComics; track $index) {
+      <article class="comic-card">
+        <div class="comic-imagen-contenedor">
+          <img
+            class="comic-imagen"
+            [src]="comic.imagen"
+            [alt]="comic.titulo"
+          />
+        </div>
+
+        <div class="comic-info">
+          <h2 class="comic-nombre">{{ comic.titulo }}</h2>
+          <p class="comic-descripcion">{{ comic.descripcion }}</p>
+        </div>
+      </article>
+    }
+  </div>
+</section>
