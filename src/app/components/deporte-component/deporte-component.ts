@@ -3,8 +3,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-deporte-component',
   standalone: false,
-  styleUrl: './deporte-component.css',
   templateUrl: './deporte-component.html',
+  styleUrl: './deporte-component.css',
 })
 export class DeporteComponent {
   @Input() sport!: string;
