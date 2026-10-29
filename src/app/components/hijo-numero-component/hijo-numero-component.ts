@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HijoNumeroComponent {
   @Input() numero!: number;
-  @Output() sumarNumerosParent: EventEmitter<any> = new EventEmitter();
+  @Output() sumarNumerosParent: EventEmitter<number> = new EventEmitter<number>();
 
   sumarNumero(): void {
     this.sumarNumerosParent.emit(this.numero);

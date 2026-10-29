@@ -1,4 +1,3 @@
-
 :host {
   display: block;
   font-family: Arial, sans-serif;
@@ -98,7 +97,6 @@
   transform: scale(1.03);
 }
 
-/* Información en chocolate con texto crema */
 .comic-info {
   padding: 16px;
 }
